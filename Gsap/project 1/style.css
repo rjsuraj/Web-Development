@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Poppins', monospace;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+nav{
+    /* background-color: red; */
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+nav img{
+    width: 250px;
+}
+
+.nav-part1{
+    display: flex;
+    gap: 50px;
+}
+
+.nav-part1 h3{
+    text-transform: uppercase;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-part2 h4{
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.started-btn{
+    text-transform: uppercase;
+    padding: 15px 25px;
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 2px;
+}
+
+#main h1{
+    font-size: 130px;
+    font-weight: 500;
+    line-height: 125px;
+    text-align: center;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
+
+#main h1 span{
+    background-color: brown;
+    font-size: 30px;
+    padding: 0 50px;
+    border-radius: 50px;
+    margin-inline: 50px;
+}
