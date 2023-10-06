@@ -1,7 +1,12 @@
+@font-face {
+    font-family: suraj;
+    src: url(./Mazius-Extraitalic.121a71a7.otf);
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Gilroy;
 }
 
 html, body {
@@ -11,25 +16,75 @@ html, body {
 
 #main{
     width: 100%;
-    height: 100%;
-    position: relative;
 }
 
-.page1{
+.loader{
     width: 100%;
-    height: 100%;
-    background-color: rgb(52, 50, 50);
+    height: 100vh;
+    background-color: #161616;
 }
-.page2{
+
+.top-heading{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,0);
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
+.top-heading h5{
+    text-transform: uppercase;
+    color: white;
+    font-size: 0.8vw;
+    text-align: center;
+    font-weight: 100;
+}
+
+.loader h1{
+    width: 100%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 4vw;
+}
+
+.loader h1 .parent{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.reveal .parent{
+    overflow: hidden;
+}
+
+.child span{
+    display: inline-block;
+}
+
+.surname{
+    color: #14CF93;
+    font-family: suraj;
+}
+
+.green-screen{
     width: 100%;
     height: 0;
-    background-color: rgb(72, 167, 127);
     position: absolute;
-    bottom: 0;
-}
-.page3{
-    width: 100%;
-    height: 100%;
-    background-color: #dadada;
+    top: 100%;
+    background-color: #14CF93;
 }
 
+
+@media (max-width:600px){
+    .top-heading h5{
+        font-size: 2.3vw;
+    }
+    .loader h1{
+        font-size: 7vw;
+    }
+}

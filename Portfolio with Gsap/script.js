@@ -1,55 +1,63 @@
-let tl = gsap.timeline()
+function revealAddDiv(){
 
-// tl.to(".page1",{
-//     height:0,
-//     duration:2,
-//     // ease:"expo.inOut"
-//     ease:Circ.easeInOut
-// })
-// .to(".page2",{
-//     height:"100%",
-//     duration:2,
-//     delay:-2,
-//     // ease:"expo.inOut"
-//     ease:Circ.easeInOut
-// })
-// .to(".page2",{
-//     bottom:"100%",
-//     duration:2,
-//     delay:-1.6,
-//     // ease:"expo.inOut"
-//     ease:Circ.easeInOut
-// })
+    document.querySelectorAll(".reveal")
+        .forEach(elem => {
+    
+            let parent = document.createElement("div");
+            let child = document.createElement("div");
+    
+    
+            child.classList.add('child')
+            parent.classList.add('parent')
+    
+            child.innerHTML = elem.innerHTML;
+            parent.appendChild(child);
+    
+            elem.innerHTML = "";
+            elem.appendChild(parent);
+    
+        })
 
-// // .to(".page2",{
-// //     height:"100%",
-// //     duration:2,
-// //     ease:"expo.inOut"
-// // })
-// // .to(".page3",{
-// //     height:"100%",
-// //     duration:2,
-// //     delay:-1.6,
-// //     ease:"expo.inOut"
-// // })
+}
 
+function loaderAnimation(){
 
+    let tl = gsap.timeline()
+    
+    tl.from("span",{
+        x:100,
+        duration:1.2,
+        stagger:0.2,
+        ease:"expo.InOut"
+    })
+    .to(".reveal .parent .child",{
+        y:"-100%",
+        duration:0.7,
+        ease:Circ.easeInOut
+    })
+    .to(".loader",{
+        height:0,
+        duration:1.5,
+        // ease:Circ.easeInOut
+        ease:"expo.out"
+    })
+    .to(".green-screen",{
+        height:"100%",
+        top:0,
+        delay:-1.5,
+        duration:1.5,
+        // ease:Circ.easeInOut
+        ease:"expo.out"
+    })
+    .to(".green-screen",{
+        height:0,
+        delay:-1.2,
+        duration:1.5,
+        // ease:Circ.easeInOut
+        ease:"expo.out"
+    })
 
-tl.to(".page1",{
-    height:0,
-    delay:1,
-    duration:2,
-    ease:Circ.easeInOut
-})
-.to(".page2",{
-    height:"100%",
-    delay:-2,
-    duration:2,
-    ease:Circ.easeInOut
-})
-.to(".page2",{
-    bottom:"100%",
-    delay:-1.6,
-    duration:2,
-    ease:Circ.easeInOut
-})
+}    
+
+revealAddDiv();
+loaderAnimation();
