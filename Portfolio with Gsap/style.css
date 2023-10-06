@@ -79,6 +79,28 @@ html, body {
     background-color: #14CF93;
 }
 
+.loading-container{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.loading{
+    background-color: #161616;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px solid #161616;
+    border-top: 3px solid #dadada;
+    border-bottom: 3px solid #dadada;
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 @media (max-width:600px){
     .top-heading h5{
