@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <h1>
+            I am suraj and I create full stack applications
+        </h1>
+        <div class="box"></div>
+    </div>
+</body>
+<script>
+    const h1 = document.querySelector('h1')
+    const colorVal = window.getComputedStyle(h1).backgroundColor
+    console.log(colorVal)
+
+    document.querySelector('.box').style.backgroundColor = colorVal;
+</script>
+</html>
